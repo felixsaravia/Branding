@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import SectionWrapper, { Card, CardTitle, AiButton } from './SectionWrapper';
 import * as geminiService from '../services/geminiService';
@@ -207,7 +208,7 @@ const AuditSection: React.FC<AuditSectionProps> = ({ brandData }) => {
 
         <div className="mt-5">
             <AiButton onClick={handleAnalyze} disabled={analysisLoading !== null}>
-                {analysisLoading ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Analizar Ahora
+                {analysisLoading ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Analizar Ahora
             </AiButton>
         </div>
         
@@ -228,7 +229,7 @@ const AuditSection: React.FC<AuditSectionProps> = ({ brandData }) => {
         />
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('audit')} disabled={!auditContent || !brandData.archetype || loading === 'audit'}>
-                {loading === 'audit' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Auditar Contenido
+                {loading === 'audit' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Auditar Contenido
             </AiButton>
         </div>
         {results.auditReport && (
@@ -244,7 +245,7 @@ const AuditSection: React.FC<AuditSectionProps> = ({ brandData }) => {
         </select>
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('checklist')} disabled={loading === 'checklist'}>
-                {loading === 'checklist' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Checklist
+                {loading === 'checklist' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Checklist
             </AiButton>
         </div>
         

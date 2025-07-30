@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import SectionWrapper, { Card, CardTitle, AiButton } from './SectionWrapper';
 import * as geminiService from '../services/geminiService';
@@ -60,7 +61,7 @@ const MessagingSection: React.FC<MessagingSectionProps> = ({ brandData }) => {
         </div>
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('names')} disabled={!nameInputs.keywords || !nameInputs.industry || loading === 'names'}>
-                {loading === 'names' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Brainstorm de Nombres
+                {loading === 'names' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Brainstorm de Nombres
             </AiButton>
         </div>
         {results.namesAndSlogans && (
@@ -97,7 +98,7 @@ const MessagingSection: React.FC<MessagingSectionProps> = ({ brandData }) => {
         />
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('copy')} disabled={!copyRequest || !brandData.archetype || loading === 'copy'}>
-                {loading === 'copy' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Copy
+                {loading === 'copy' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Copy
             </AiButton>
         </div>
         {results.copy && (

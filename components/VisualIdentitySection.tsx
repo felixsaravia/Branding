@@ -144,7 +144,7 @@ const VisualIdentitySection: React.FC<VisualIdentitySectionProps> = ({ brandData
         </div>
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('colors')} disabled={!brandData.archetype || !colorInputs.industry || !colorInputs.emotions || loading === 'colors'}>
-                {loading === 'colors' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Paletas
+                {loading === 'colors' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Paletas
             </AiButton>
         </div>
         {results.palettes && (
@@ -173,7 +173,7 @@ const VisualIdentitySection: React.FC<VisualIdentitySectionProps> = ({ brandData
         </div>
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('logos')} disabled={!brandData.archetype || !logoInputs.keywords || loading === 'logos'}>
-                {loading === 'logos' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Conceptos de Logo
+                {loading === 'logos' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Conceptos de Logo
             </AiButton>
         </div>
         {loading === 'logos' && <div className="flex justify-center mt-4"><Loader /></div>}
@@ -192,7 +192,7 @@ const VisualIdentitySection: React.FC<VisualIdentitySectionProps> = ({ brandData
           <p className="text-slate-600 mb-5">Obtén combinaciones de fuentes que complementen tu identidad. <strong className="text-violet-600">Arquetipo actual: {brandData.archetype || 'No definido'}</strong>.</p>
           <div className="mt-5">
             <AiButton onClick={() => handleGenerate('typography')} disabled={!brandData.archetype || loading === 'typography'}>
-              {loading === 'typography' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Sugerir Tipografías
+              {loading === 'typography' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Sugerir Tipografías
             </AiButton>
           </div>
           {results.typography && (
@@ -252,7 +252,7 @@ const VisualIdentitySection: React.FC<VisualIdentitySectionProps> = ({ brandData
           </select>
           <div className="mt-5">
             <AiButton onClick={() => handleGenerate('mockup')} disabled={(!mockupInputs.description && !uploadedImageFile) || loading === 'mockup'}>
-                {loading === 'mockup' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Mockup
+                {loading === 'mockup' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />} Generar Mockup
             </AiButton>
           </div>
           {loading === 'mockup' && (

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import SectionWrapper, { Card, CardTitle, AiButton } from './SectionWrapper';
 import * as geminiService from '../services/geminiService';
@@ -87,7 +88,7 @@ ${json.productDescription.content}
         />
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('archetype')} disabled={!userInput || loading === 'archetype'}>
-              {loading === 'archetype' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
+              {loading === 'archetype' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
               Analizar Arquetipo
             </AiButton>
         </div>
@@ -108,7 +109,7 @@ ${json.productDescription.content}
         />
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('mvv')} disabled={!ideas || !brandData.archetype || loading === 'mvv'}>
-              {loading === 'mvv' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
+              {loading === 'mvv' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
               Generar Declaraciones
             </AiButton>
         </div>
@@ -139,7 +140,7 @@ ${json.productDescription.content}
         </select>
         <div className="mt-5">
             <AiButton onClick={() => handleGenerate('voice')} disabled={!userInput || !brandData.archetype || loading === 'voice'}>
-              {loading === 'voice' ? <Loader size="5" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
+              {loading === 'voice' ? <Loader color="white" size="5" className="mr-2" /> : <SparklesIcon className="w-5 h-5 mr-2" />}
               Generar Ejemplos de Tono
             </AiButton>
         </div>

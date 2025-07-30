@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import SectionWrapper, { Card, CardTitle, AiButton } from './SectionWrapper';
 import * as geminiService from '../services/geminiService';
@@ -178,7 +179,7 @@ const AcademySection: React.FC = () => {
                 className={`${inputClasses} flex-grow`}
             />
             <AiButton onClick={handleAskQuestion} disabled={loading || !question.trim()}>
-                {loading ? <Loader size="5" /> : 'Preguntar'}
+                {loading ? <Loader color="white" size="5" /> : 'Preguntar'}
             </AiButton>
         </div>
       </Card>
