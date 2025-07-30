@@ -1,8 +1,10 @@
 import { GoogleGenAI, Type, GenerateContentResponse } from "@google/genai";
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable not set");
-}
+// This check is removed as it causes build failures on platforms like Vercel.
+// The API key is injected at runtime via index.html
+// if (!process.env.API_KEY) {
+//   throw new Error("API_KEY environment variable not set");
+// }
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 const textModel = 'gemini-2.5-flash';
