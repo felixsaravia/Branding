@@ -1,0 +1,7 @@
+{
+  "name": "Brand Core Forge",
+  "description": "An AI-powered suite of tools to help entrepreneurs and creators define their brand's core, create a visual identity, and craft compelling messaging using the power of Gemini.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
